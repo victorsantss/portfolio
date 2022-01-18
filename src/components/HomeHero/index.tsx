@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-curly-brace-presence */
-/* eslint-disable react/jsx-no-comment-textnodes */
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 import picture from '../../assets/foto.webp';
 

@@ -29,6 +29,10 @@ module.exports = {
     'space-before-function-paren': 'off',
     'react/prop-types': 'off',
     'import/prefer-default-export': 'off',
-    'jsx-a11y/anchor-is-valid': 'off'
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/require-default-props': 'off',
+    'import/no-named-as-default': 'off',
+    'react/jsx-curly-brace-presence': 'off',
+    'react/jsx-no-comment-textnodes': 'off'
   }
 };
