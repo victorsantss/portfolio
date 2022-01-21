@@ -1,0 +1,22 @@
+import { Container } from './styles';
+
+interface ProjectBannerProps {
+  title: string;
+  type: string;
+  imgUrl: string;
+}
+
+function ProjectBanner({ title, type, imgUrl }: ProjectBannerProps) {
+  return (
+    <Container imgUrl={imgUrl}>
+      <div className="ovelay">
+        <section>
+          <h1>{title}</h1>
+          <h2>{type}</h2>
+        </section>
+      </div>
+    </Container>
+  );
+}
+
+export default ProjectBanner;
