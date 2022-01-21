@@ -1,4 +1,4 @@
-import { AiFillLinkedin, AiOutlineGithub } from 'react-icons/ai';
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
 import { Container } from './styles';
 
 function Footer() {
@@ -19,17 +19,18 @@ function Footer() {
         <button type="button" onClick={handleScrollTop}>
           Voltar ao topo
         </button>
+
+        <section>
+          <AiOutlineGithub
+            onClick={() => handleRedirect('https://github.com/victorsantss')}
+          />
+          <AiFillLinkedin
+            onClick={() =>
+              handleRedirect('https://www.linkedin.com/in/victor-santss')
+            }
+          />
+        </section>
       </div>
-      <section>
-        <AiOutlineGithub
-          onClick={() => handleRedirect('https://github.com/victorsantss')}
-        />
-        <AiFillLinkedin
-          onClick={() =>
-            handleRedirect('https://www.linkedin.com/in/victor-santss')
-          }
-        />
-      </section>
     </Container>
   );
 }
