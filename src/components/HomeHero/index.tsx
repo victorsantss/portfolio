@@ -3,7 +3,7 @@ import picture from '../../assets/foto.webp';
 
 function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img src={picture} alt="Foto" />
       <div>
         <TextContainer>
@@ -11,7 +11,7 @@ function HomeHero() {
           <h2>Me chamo Victor</h2>
         </TextContainer>
         <InfosContainer>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="comment">//Minha apresentação</span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
@@ -22,7 +22,7 @@ function HomeHero() {
             </div>
             {'\u007D'}
           </CodeItem>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="purple">Especialidades</span> {'\u007B'}
             <div>
               Front-end: <span className="blue">React / Vue,</span>
