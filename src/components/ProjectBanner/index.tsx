@@ -9,12 +9,11 @@ interface ProjectBannerProps {
 function ProjectBanner({ title, type, imgUrl }: ProjectBannerProps) {
   return (
     <Container imgUrl={imgUrl}>
-      <div className="ovelay">
-        <section>
-          <h1>{title}</h1>
-          <h2>{type}</h2>
-        </section>
-      </div>
+      <div className="overlay" />
+      <section>
+        <h1>{title}</h1>
+        <h2>{type}</h2>
+      </section>
     </Container>
   );
 }

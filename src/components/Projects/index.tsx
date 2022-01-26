@@ -3,30 +3,34 @@ import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectItem';
 import { Container } from './styles';
 
-function Projects() {
+interface Iproject {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+
+interface ProjectProps {
+  projects: Iproject[];
+}
+
+function Projects({ projects }: ProjectProps) {
   return (
     <Container>
       <SectionTitle title="Ultimos Projetos" />
 
       <section>
-        <ProjectItem
-          img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF13z3d5oCYMIbMWVP7__r3ho7Loi-mUOBVg&usqp=CAU"
-          title="Projeto 01"
-          type="Website"
-          slug="teste"
-        />
-        <ProjectItem
-          img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF13z3d5oCYMIbMWVP7__r3ho7Loi-mUOBVg&usqp=CAU"
-          title="Projeto 02"
-          type="Website"
-          slug="teste"
-        />
-        <ProjectItem
-          img="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF13z3d5oCYMIbMWVP7__r3ho7Loi-mUOBVg&usqp=CAU"
-          title="Projeto 03"
-          type="Website"
-          slug="teste"
-        />
+        {projects.slice(0, 3).map(project => (
+          <ProjectItem
+            key={project.slug}
+            img={project.thumbnail}
+            title={project.title}
+            type={project.type}
+            slug={project.slug}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projects">
