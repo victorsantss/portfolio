@@ -1,4 +1,8 @@
-import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai';
+import {
+  AiOutlineGithub,
+  AiFillLinkedin,
+  AiOutlineWhatsApp
+} from 'react-icons/ai';
 import { Container } from './styles';
 
 function Footer() {
@@ -27,6 +31,13 @@ function Footer() {
           <AiFillLinkedin
             onClick={() =>
               handleRedirect('https://www.linkedin.com/in/victor-santss')
+            }
+          />
+          <AiOutlineWhatsApp
+            onClick={() =>
+              handleRedirect(
+                'https://api.whatsapp.com/send?phone=5554996766505&text=Hello%20Victor!'
+              )
             }
           />
         </section>
