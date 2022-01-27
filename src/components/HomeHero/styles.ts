@@ -6,9 +6,9 @@ export const Container = styled.section`
   gap: 2rem;
   align-items: center;
   justify-content: center;
-  margin-top: 5rem;
+  margin-top: 1rem;
   > img {
-    width: 40rem;
+    width: 36rem;
     flex: 1;
   }
   > div {
@@ -39,11 +39,11 @@ export const TextContainer = styled.section`
   margin-bottom: 2rem;
   width: 100%;
   h1 {
-    font-size: 8rem;
+    font-size: 6rem;
     color: ${({ theme }) => theme.primary};
   }
   h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: ${({ theme }) => theme.secondary};
   }
@@ -79,6 +79,7 @@ export const CodeItem = styled.pre`
   font-weight: 300;
   color: #fff;
   width: 24rem;
+  border-radius: 0.5rem;
   align-self: flex-start;
   transition: 1s !important;
   @media (max-width: 1450px) {

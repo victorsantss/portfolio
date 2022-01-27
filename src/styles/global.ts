@@ -2,7 +2,7 @@ import { lighten } from 'polished';
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  *{
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -20,10 +20,6 @@ export default createGlobalStyle`
     }
   }
   body {
-    // removido .colors (.theme.colors.background e text)
-    background: ${props => props.theme.background};
-    color: ${props => props.theme.text};
-    font: 400 16px Inter, sans-serif;
     background: ${props => props.theme.background};
     font: 400 1rem 'Montserrat', sans-serif;
   }
@@ -45,5 +41,14 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: 85rem;
     padding: 0 1rem;
+    @media(max-width:1450px) {
+      max-width: 70rem;
+    }
+    @media(max-width:1000px) {
+      max-width: 50rem;
+    }
+    @media(max-width:700px) {
+      padding: 0 2rem;
+    }
   }
 `;

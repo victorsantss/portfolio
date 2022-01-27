@@ -29,13 +29,14 @@ export const ItemContainer = styled.div`
     background: ${({ theme }) => theme.gradient};
     padding: 1rem;
     padding-top: 2.5rem;
+    border-radius: 1rem;
     height: 20rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 
-    max-width: 19rem;
+    max-width: 24rem;
 
     transition: 0.5s;
 

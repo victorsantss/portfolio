@@ -19,7 +19,7 @@ interface ProjectProps {
 function Projects({ projects }: ProjectProps) {
   return (
     <Container>
-      <SectionTitle title="Ultimos Projetos" />
+      <SectionTitle title="Últimos Projetos" />
 
       <section>
         {projects.slice(0, 3).map(project => (

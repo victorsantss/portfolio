@@ -84,6 +84,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
     background: url(${props => props.imgUrl}) no-repeat center;
     background-size: cover;
     position: relative;
+    border-radius: 0.5rem;
     > div.overlay {
       position: absolute;
       width: 100%;
@@ -91,6 +92,7 @@ export const ProjectContainer = styled.div<ProjectProps>`
       background: ${({ theme }) => theme.gradient};
       opacity: 0.75;
       transition: 0.5s;
+      border-radius: 0.5rem;
     }
     > div.text {
       position: absolute;
