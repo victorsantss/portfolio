@@ -36,7 +36,7 @@ export const ItemContainer = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
 
-    max-width: 24rem;
+    max-width: 26rem;
 
     transition: 0.5s;
 
