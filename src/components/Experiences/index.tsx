@@ -9,12 +9,12 @@ function Experiences() {
 
       <section>
         <ExperienceItem
-          year="2021~"
+          year="2021-Atual"
           title="Desenvolvedor Freelancer"
           description="Desenvolvimento de sites, landing pages, UX e UI."
         />
         <ExperienceItem
-          year="2021~"
+          year="2021-Atual"
           title="Desenvolvedor FullStack"
           description="Desenvolvimento Web com PHP, Vue.js, Javascript e PostgreSQL."
         />

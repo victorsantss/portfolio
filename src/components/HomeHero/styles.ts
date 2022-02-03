@@ -8,15 +8,16 @@ export const Container = styled.section`
   justify-content: center;
   margin-top: 1rem;
   > img {
-    width: 36rem;
-    flex: 1;
+    width: 30rem;
   }
   > div {
     flex: 4;
+    max-width: 720px;
   }
   @media (max-width: 1450px) {
     > img {
-      width: 30rem;
+      width: 26rem;
+      flex: 1;
     }
     > div {
       flex: 1;
@@ -24,11 +25,11 @@ export const Container = styled.section`
   }
   @media (max-width: 1000px) {
     > img {
-      width: 22rem;
+      width: 24rem;
     }
   }
   @media (max-width: 700px) {
-    flex-direction: column-reverse;
+    flex-direction: column;
     > div {
       width: 100%;
     }

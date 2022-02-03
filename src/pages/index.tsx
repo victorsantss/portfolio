@@ -14,6 +14,7 @@ import ContactForm from '../components/ContactForm';
 import Footer from '../components/Footer';
 import { getPrismicClient } from '../services/prismic';
 import 'aos/dist/aos.css';
+import About from '../components/About';
 
 interface Iproject {
   slug: string;
@@ -54,6 +55,7 @@ export default function Home({ projects }: HomeProps) {
         <Header />
         <main className="container">
           <HomeHero />
+          <About />
           <Experiences />
           <Projects projects={projects} />
           <Knowledges />
