@@ -49,6 +49,7 @@ export default class MyDocument extends Document {
           />
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="google-site-verification" content="Y8Yoz650eCHqTyzEpTfSO8R0r6vBNC9_ygx2fe6azVI" />
           <link rel="shortcut icon" href="/favicon.ico" />
         </Head>
         <body>
