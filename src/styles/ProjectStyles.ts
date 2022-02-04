@@ -21,7 +21,7 @@ export const ProjectContainer = styled.div`
     }
 
     button {
-      background: ${({ theme }) => theme.primary};
+      background: ${({ theme }) => theme.secondary};
       padding: 0.8rem 3rem;
       border-radius: 0.5rem;
       border: none;
@@ -29,7 +29,7 @@ export const ProjectContainer = styled.div`
       margin-top: 2rem;
 
       &:hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
+        background: ${({ theme }) => darken(0.05, theme.secondary)};
       }
 
       a {
