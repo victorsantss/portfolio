@@ -14,7 +14,12 @@ function Experiences() {
           description="Desenvolvimento de sites, landing pages, UX e UI."
         />
         <ExperienceItem
-          year="2021-Atual"
+          year="2022-Atual"
+          title="Junior Fullstack Developer"
+          description="Desenvolvimento de marketplaces com React e Node.js."
+        />
+        <ExperienceItem
+          year="2021-2022"
           title="Desenvolvedor FullStack"
           description="Desenvolvimento Web com PHP, Vue.js, Javascript e PostgreSQL."
         />
