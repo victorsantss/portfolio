@@ -1,7 +1,9 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 import picture from '../../assets/logo.png';
+import getYearsOld from '../../utils/getYearsOld';
 
 function HomeHero() {
+  const yearsOld = getYearsOld();
   return (
     <Container data-aos="fade-up">
       <img src={picture} alt="Foto" />
@@ -18,7 +20,7 @@ function HomeHero() {
               Sobrenome: <span className="blue">Santos,</span>
             </div>
             <div>
-              Idade: <span className="blue">24 anos</span>
+              Idade: <span className="blue">{yearsOld} anos</span>
             </div>
             {'\u007D'}
           </CodeItem>

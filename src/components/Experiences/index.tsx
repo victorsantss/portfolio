@@ -1,11 +1,17 @@
+import getYearsOfExperience from '../../utils/getYearsOfExperience';
 import SectionTitle from '../SectionTitle';
 import ExperienceItem from './ExperienceItem';
 import { Container } from './styles';
 
 function Experiences() {
+  const yearsOfExperience = getYearsOfExperience();
+
   return (
     <Container>
-      <SectionTitle title="02 anos" description="de experiência" />
+      <SectionTitle
+        title={`${yearsOfExperience} anos`}
+        description="de experiência"
+      />
 
       <section>
         <ExperienceItem
