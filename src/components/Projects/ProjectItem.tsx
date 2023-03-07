@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { AiOutlineRightCircle } from 'react-icons/ai';
+import { useTranslation } from '../../hooks/useTranslation';
 import { ProjectContainer } from './styles';
 
 interface ProjectProps {
@@ -10,6 +11,8 @@ interface ProjectProps {
 }
 
 export default function ProjectItem({ title, type, slug, img }: ProjectProps) {
+  const { projectItemButton } = useTranslation();
+
   return (
     <ProjectContainer imgUrl={img} data-aos="fade-up">
       <section>
@@ -22,7 +25,7 @@ export default function ProjectItem({ title, type, slug, img }: ProjectProps) {
       <button type="button">
         <Link href={`/projects/${slug}`}>
           <a>
-            Ver mais <AiOutlineRightCircle />
+            {projectItemButton} <AiOutlineRightCircle />
           </a>
         </Link>
       </button>

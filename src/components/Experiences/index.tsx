@@ -1,3 +1,4 @@
+import { useTranslation } from '../../hooks/useTranslation';
 import getYearsOfExperience from '../../utils/getYearsOfExperience';
 import SectionTitle from '../SectionTitle';
 import ExperienceItem from './ExperienceItem';
@@ -5,34 +6,50 @@ import { Container } from './styles';
 
 function Experiences() {
   const yearsOfExperience = getYearsOfExperience();
+  const {
+    experiencesTitleStart,
+    experiencesTitleEnd,
+    experienceItem1Title,
+    experienceItem1Year,
+    experienceItem1Description,
+    experienceItem2Title,
+    experienceItem2Year,
+    experienceItem2Description,
+    experienceItem3Title,
+    experienceItem3Year,
+    experienceItem3Description,
+    experienceItem4Title,
+    experienceItem4Year,
+    experienceItem4Description
+  } = useTranslation();
 
   return (
     <Container>
       <SectionTitle
-        title={`${yearsOfExperience} anos`}
-        description="de experiência"
+        title={`${yearsOfExperience} ${experiencesTitleStart}`}
+        description={experiencesTitleEnd}
       />
 
       <section>
         <ExperienceItem
-          year="2021-Atual"
-          title="Desenvolvedor Freelancer"
-          description="Desenvolvimento de sites, landing pages, UX e UI."
+          year={experienceItem4Year}
+          title={experienceItem4Title}
+          description={experienceItem4Description}
         />
         <ExperienceItem
-          year="2022-Atual"
-          title="Junior Fullstack Developer"
-          description="Desenvolvimento de marketplaces com React e Node.js."
+          year={experienceItem3Year}
+          title={experienceItem3Title}
+          description={experienceItem3Description}
         />
         <ExperienceItem
-          year="2021-2022"
-          title="Desenvolvedor FullStack"
-          description="Desenvolvimento Web com PHP, Vue.js, Javascript e PostgreSQL."
+          year={experienceItem2Year}
+          title={experienceItem2Title}
+          description={experienceItem2Description}
         />
         <ExperienceItem
-          year="2020-2021"
-          title="Assistente técnico"
-          description="Suporte técnico e contábil no grupo de sistemas da contabilidade e escrita de códigos em SQL."
+          year={experienceItem1Year}
+          title={experienceItem1Title}
+          description={experienceItem1Description}
         />
       </section>
     </Container>

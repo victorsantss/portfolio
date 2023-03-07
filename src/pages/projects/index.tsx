@@ -5,6 +5,7 @@ import Header from '../../components/Header';
 import ProjectItems from '../../components/ProjectItems';
 import { ProjectsContainer } from '../../styles/ProjectsStyles';
 import { getPrismicClient } from '../../services/prismic';
+import { useTranslation } from '../../hooks/useTranslation';
 
 interface Iproject {
   slug: string;
@@ -20,10 +21,12 @@ interface ProjectProps {
 }
 
 export default function Projects({ projects }: ProjectProps) {
+  const { projectsTabTitle } = useTranslation();
+
   return (
     <ProjectsContainer>
       <Head>
-        <title>Projetos | Victor Santos</title>
+        <title>{projectsTabTitle} | Victor Santos</title>
         <meta
           name="description"
           content="Aqui estão todos os projetos que já desenvolvi!"

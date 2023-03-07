@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useTranslation } from '../../hooks/useTranslation';
 import { sendContactMail } from '../../services/sendMail';
 import theme from '../../styles/theme';
 import { FormContainer, Input, TextArea } from './styles';
@@ -11,11 +12,21 @@ export default function Form() {
 
   const [loading, setLoading] = useState(false);
 
+  const {
+    contactFormNamePlaceholder,
+    contactFormEmailPlaceholder,
+    contactFormMessagePlaceholder,
+    contactFormButtonPlaceholder,
+    contactFormInvalidMessage,
+    contactFormSuccessMessage,
+    contactFormErrorMessage
+  } = useTranslation();
+
   async function handleSubmit(event) {
     event.preventDefault();
 
     if (!nome || !email || !mensagem) {
-      toast('Preencha todos os campos para enviar sua mensagem!', {
+      toast(`${contactFormInvalidMessage}`, {
         style: {
           background: theme.error,
           color: '#fff'
@@ -31,14 +42,14 @@ export default function Form() {
       setEmail('');
       setMensagem('');
 
-      toast('Mensagem enviada com sucesso!', {
+      toast(`${contactFormSuccessMessage}`, {
         style: {
           background: theme.secondary,
           color: '#fff'
         }
       });
     } catch (error) {
-      toast('Ocorreu um erro ao tentar enviar sua mensagem. Tente novamente!', {
+      toast(`${contactFormErrorMessage}`, {
         style: {
           background: theme.error,
           color: '#fff'
@@ -51,23 +62,23 @@ export default function Form() {
   return (
     <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
       <Input
-        placeholder="Nome"
+        placeholder={contactFormNamePlaceholder}
         value={nome}
         onChange={({ target }) => setNome(target.value)}
       />
       <Input
-        placeholder="E-mail"
+        placeholder={contactFormEmailPlaceholder}
         value={email}
         onChange={({ target }) => setEmail(target.value)}
         type="email"
       />
       <TextArea
-        placeholder="Mensagem"
+        placeholder={contactFormMessagePlaceholder}
         value={mensagem}
         onChange={({ target }) => setMensagem(target.value)}
       />
       <button type="submit" disabled={loading}>
-        ENVIAR
+        {contactFormButtonPlaceholder}
       </button>
     </FormContainer>
   );

@@ -7,6 +7,7 @@ import ProjectBanner from '../../../components/ProjectBanner';
 import { getPrismicClient } from '../../../services/prismic';
 import { ProjectContainer } from '../../../styles/ProjectStyles';
 import LoadingScreen from '../../../components/LoadingScreen';
+import { useTranslation } from '../../../hooks/useTranslation';
 
 interface Iproject {
   slug: string;
@@ -23,6 +24,8 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   const router = useRouter();
+  const { projectItemOnlineButton } = useTranslation();
+
   if (router.isFallback) {
     return <LoadingScreen />;
   }
@@ -47,7 +50,7 @@ export default function Project({ project }: ProjectProps) {
       <main>
         <p>{project.description}</p>
         <button type="button">
-          <a href={project.link}>Ver projeto online</a>
+          <a href={project.link}>{projectItemOnlineButton}</a>
         </button>
       </main>
     </ProjectContainer>

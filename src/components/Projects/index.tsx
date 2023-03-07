@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useTranslation } from '../../hooks/useTranslation';
 import SectionTitle from '../SectionTitle';
 import ProjectItem from './ProjectItem';
 import { Container } from './styles';
@@ -17,9 +18,11 @@ interface ProjectProps {
 }
 
 function Projects({ projects }: ProjectProps) {
+  const { projectsTitle, projectsButton } = useTranslation();
+
   return (
     <Container>
-      <SectionTitle title="Últimos Projetos" />
+      <SectionTitle title={projectsTitle} />
 
       <section>
         {projects.slice(0, 3).map(project => (
@@ -34,7 +37,7 @@ function Projects({ projects }: ProjectProps) {
       </section>
       <button type="button">
         <Link href="/projects">
-          <a>Ver todos os projetos</a>
+          <a>{projectsButton}</a>
         </Link>
       </button>
     </Container>

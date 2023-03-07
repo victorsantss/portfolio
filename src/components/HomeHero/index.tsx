@@ -1,36 +1,58 @@
 import { Container, TextContainer, InfosContainer, CodeItem } from './styles';
 import picture from '../../assets/logo.png';
 import getYearsOld from '../../utils/getYearsOld';
+import { useTranslation } from '../../hooks/useTranslation';
 
 function HomeHero() {
   const yearsOld = getYearsOld();
+  const {
+    homeHeroTitle1,
+    homeHeroTitle2,
+    homeHeroCard1Title,
+    homeHeroCard1Subtitle,
+    homeHeroCard1Entry1,
+    homeHeroCard1Entry2,
+    homeHeroCard1Value1,
+    homeHeroCard1Value2,
+    homeHeroCard2Subtitle,
+    homeHeroCard2Entry1,
+    homeHeroCard2Entry2,
+    homeHeroCard2Value1,
+    homeHeroCard2Value2
+  } = useTranslation();
   return (
     <Container data-aos="fade-up">
       <img src={picture} alt="Foto" />
       <div>
         <TextContainer>
-          <h1>Olá</h1>
-          <h2>Me chamo Victor</h2>
+          <h1>{homeHeroTitle1}</h1>
+          <h2>{homeHeroTitle2}</h2>
         </TextContainer>
         <InfosContainer>
           <CodeItem data-aos="zoom-in">
-            <span className="comment">//Minha apresentação</span>
-            <span className="purple">Infos</span> {'\u007B'}
+            <span className="comment">//{homeHeroCard1Title}</span>
+            <span className="purple">{homeHeroCard1Subtitle}</span> {'\u007B'}
             <div>
-              Sobrenome: <span className="blue">Santos,</span>
+              {homeHeroCard1Entry1}:{' '}
+              <span className="blue">{homeHeroCard1Value1},</span>
             </div>
             <div>
-              Idade: <span className="blue">{yearsOld} anos</span>
+              {homeHeroCard1Entry2}:{' '}
+              <span className="blue">
+                {yearsOld} {homeHeroCard1Value2}
+              </span>
             </div>
             {'\u007D'}
           </CodeItem>
           <CodeItem data-aos="zoom-in">
-            <span className="purple">Especialidades</span> {'\u007B'}
+            <span className="purple">{homeHeroCard2Subtitle}</span> {'\u007B'}
             <div>
-              Front-end: <span className="blue">React / Vue,</span>
+              {homeHeroCard2Entry1}:{' '}
+              <span className="blue">{homeHeroCard2Value1},</span>
             </div>
             <div>
-              Back-end: <span className="blue">PHP</span>
+              {homeHeroCard2Entry2}:{' '}
+              <span className="blue">{homeHeroCard2Value2}</span>
             </div>
             {'\u007D'}
           </CodeItem>

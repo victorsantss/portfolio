@@ -1,23 +1,30 @@
+import { useTranslation } from '../../hooks/useTranslation';
 import SectionTitle from '../SectionTitle';
 import Form from './Form';
 import { Container } from './styles';
 
 function ContactForm() {
+  const {
+    contactFormTitleStart,
+    contactFormTitleEnd,
+    contactFormSubTitleStart,
+    contactFormSubTitleEnd
+  } = useTranslation();
   return (
     <Container>
       <SectionTitle
         title={
           <>
-            Precisa dos
+            {contactFormTitleStart}
             <br />
-            meus serviços?
+            {contactFormTitleEnd}
           </>
         }
         description={
           <>
-            Preencha o formulário abaixo que
+            {contactFormSubTitleStart}
             <br />
-            irei retornar em breve
+            {contactFormSubTitleEnd}
           </>
         }
       />

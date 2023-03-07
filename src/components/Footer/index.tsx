@@ -3,9 +3,12 @@ import {
   AiFillLinkedin,
   AiOutlineWhatsApp
 } from 'react-icons/ai';
+import { useTranslation } from '../../hooks/useTranslation';
 import { Container } from './styles';
 
 function Footer() {
+  const { footerText } = useTranslation();
+
   function handleRedirect(url: string) {
     window.open(url);
   }
@@ -21,7 +24,7 @@ function Footer() {
     <Container>
       <div className="container">
         <button type="button" onClick={handleScrollTop}>
-          Voltar ao topo
+          {footerText}
         </button>
 
         <section>
