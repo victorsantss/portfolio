@@ -4,12 +4,8 @@ import picture from '../../assets/foto.webp';
 import { useTranslation } from '../../hooks/useTranslation';
 
 function About() {
-  const {
-    aboutTitle,
-    aboutTextPresentation,
-    aboutTextSecondParagraph,
-    aboutTextThirdParagraph
-  } = useTranslation();
+  const { aboutTitle, aboutTextPresentation, aboutTextSecondParagraph } =
+    useTranslation();
   return (
     <Container>
       <SectionTitle title={aboutTitle} />
