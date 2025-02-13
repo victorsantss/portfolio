@@ -1,15 +1,12 @@
 import SectionTitle from '../SectionTitle';
 import { AboutContainer, Container } from './styles';
 import picture from '../../assets/foto.webp';
-import getYearsOld from '../../utils/getYearsOld';
 import { useTranslation } from '../../hooks/useTranslation';
 
 function About() {
-  const yearsOld = getYearsOld();
   const {
     aboutTitle,
-    aboutTextPresentationStart,
-    aboutTextPresentationEnd,
+    aboutTextPresentation,
     aboutTextSecondParagraph,
     aboutTextThirdParagraph
   } = useTranslation();
@@ -18,11 +15,9 @@ function About() {
       <SectionTitle title={aboutTitle} />
       <AboutContainer data-aos="fade-up">
         <p>
-          {aboutTextPresentationStart} {yearsOld} {aboutTextPresentationEnd}
+          {aboutTextPresentation}
           <br />
           {aboutTextSecondParagraph}
-          <br />
-          {aboutTextThirdParagraph}
         </p>
         <img src={picture} alt="Foto" />
       </AboutContainer>

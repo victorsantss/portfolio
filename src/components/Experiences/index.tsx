@@ -20,7 +20,10 @@ function Experiences() {
     experienceItem3Description,
     experienceItem4Title,
     experienceItem4Year,
-    experienceItem4Description
+    experienceItem4Description,
+    experienceItem5Title,
+    experienceItem5Year,
+    experienceItem5Description
   } = useTranslation();
 
   return (
@@ -31,6 +34,11 @@ function Experiences() {
       />
 
       <section>
+        <ExperienceItem
+          year={experienceItem5Year}
+          title={experienceItem5Title}
+          description={experienceItem5Description}
+        />
         <ExperienceItem
           year={experienceItem4Year}
           title={experienceItem4Title}
@@ -46,11 +54,12 @@ function Experiences() {
           title={experienceItem2Title}
           description={experienceItem2Description}
         />
-        <ExperienceItem
+        {/* Commented for better experiences history and responsiveness */}
+        {/* <ExperienceItem
           year={experienceItem1Year}
           title={experienceItem1Title}
           description={experienceItem1Description}
-        />
+        /> */}
       </section>
     </Container>
   );
